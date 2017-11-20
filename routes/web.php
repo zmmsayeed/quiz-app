@@ -12,11 +12,15 @@
 */
 
 Route::get('/', function () {
-    return view('index');
+    return redirect('login');
 });
 
 Route::get('/quiz', function () {
     return view('quiz');
 });
 
+
 Route::resource('/quizzes','QuizzesController');
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');

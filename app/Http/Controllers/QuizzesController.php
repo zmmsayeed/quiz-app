@@ -53,20 +53,20 @@ class QuizzesController extends Controller
         $q = [];
 
         $questions = $quiz->questions;
-        foreach($questions as $key => $question) {
-            $q[$key] = [
-                'text' => $question->text,
-                'choices' => $question->choices
+        // foreach($questions as $key => $question) {
+        //     $q[$key] = [
+        //         'text' => $question->text,
+        //         'choices' => $question->choices
 
                 
                 
-            ];
+        //     ];
 
-        }
+        // }
 
-        $data['questions'] = $q;
+        // $data['questions'] = $q;
 
-        return $data;
+        return view('quiz')->with('questions', $questions);
     }
 
     /**
