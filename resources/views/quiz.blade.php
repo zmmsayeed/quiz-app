@@ -22,10 +22,10 @@
                 </div>
 
                 <div class="choices-group"> 
-                    <ul type="a" class="choices " style="list-style:none;">
+                    <ul type="a" class="choices" style="list-style:none;">
                         @foreach($question->choices as $choice)
-                            <li class="isCorrect={{ $choice->is_correct }}">
-                                <input class="choice" name="choice{{ $loop->parent->iteration }}" 
+                            <li>
+                                <input class="choice isCorrect={{ $choice->is_correct }}" name="choice{{ $loop->parent->iteration }}" 
                                     type="radio">
                                 {{ $choice->text }} 
                             </li>
