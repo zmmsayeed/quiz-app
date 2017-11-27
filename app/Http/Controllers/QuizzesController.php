@@ -66,7 +66,7 @@ class QuizzesController extends Controller
 
         // $data['questions'] = $q;
 
-        return view('quiz')->with('questions', $questions);
+        return view('quizzes.index')->with('questions', $questions);
     }
 
     /**

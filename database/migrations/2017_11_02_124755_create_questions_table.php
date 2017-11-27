@@ -17,7 +17,6 @@ class CreateQuestionsTable extends Migration
             $table->increments('id');
             $table->timestamps();
             $table->integer('quiz_id');
-            $table->string('topic');
             $table->text('text');
         });
     }

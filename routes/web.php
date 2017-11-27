@@ -16,11 +16,13 @@ Route::get('/', function () {
 });
 
 Route::get('/quiz', function () {
-    return view('quiz');
+    return view('quizzes.index');
 });
 
 
 Route::resource('/quizzes','QuizzesController');
 Auth::routes();
+
+Route::resource('/questions','QuestionsController');
 
 Route::get('/home', 'HomeController@index')->name('home');

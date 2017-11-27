@@ -3,6 +3,8 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Question as Question;
+use App\Choice as Choice;
 
 class QuestionsController extends Controller
 {
@@ -23,7 +25,7 @@ class QuestionsController extends Controller
      */
     public function create()
     {
-        //
+        return view('questions.create');
     }
 
     /**
@@ -34,7 +36,32 @@ class QuestionsController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $question = new Question;
+        $question->text = $request->question_text;
+        $question->quiz_id = $request->topic;
+        $question->save();
+
+        $choice1 = new Choice;
+        $choice1->is_correct = $request->choice1_is_correct;
+        $choice1->text = $request->choice1;
+        $question->choices()->save($choice1);
+
+        $choice2 = new Choice;
+        $choice2->is_correct = $request->choice2_is_correct;
+        $choice2->text = $request->choice2;
+        $question->choices()->save($choice2);
+        
+        $choice3 = new Choice;
+        $choice3->is_correct = $request->choice3_is_correct;
+        $choice3->text = $request->choice3;
+        $question->choices()->save($choice3);
+        
+        $choice4 = new Choice;
+        $choice4->is_correct = $request->choice4_is_correct;
+        $choice4->text = $request->choice4;
+        $question->choices()->save($choice4);
+        
+        return redirect('home');
     }
 
     /**
