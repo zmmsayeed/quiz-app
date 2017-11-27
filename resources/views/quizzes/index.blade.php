@@ -25,8 +25,8 @@
                     <ul type="a" class="choices" style="list-style:none;">
                         @foreach($question->choices as $choice)
                             <li>
-                                <input class="choice isCorrect={{ $choice->is_correct }}" name="choice{{ $loop->parent->iteration }}" 
-                                    type="radio">
+                                <input class="choice isCorrect={{ $choice->is_correct }}" 
+                                    name="choice{{ $loop->parent->iteration }}" type="radio">
                                 {{ $choice->text }} 
                             </li>
                         @endforeach
@@ -35,8 +35,10 @@
             @endforeach
             <input type="submit" value="Submit" class="btn btn-priamry">
         </form>
+        
     </div>
-
+    <div class="error-msg"></div>
+    <div class="result"></div>
 <script src="{{ asset('js/app.js') }}"></script>
 </body>
 </html>

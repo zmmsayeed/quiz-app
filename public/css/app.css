@@ -8376,3 +8376,7 @@ button.close {
   padding: 15px;
 }
 
+.error-msg {
+  display: none;
+}
+
