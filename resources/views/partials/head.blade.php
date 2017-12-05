@@ -11,7 +11,9 @@
 <!-- Styles -->
 <style>
     html, body {
-        background-color: #fff;
+        /* background-color: #fff; */
+        background: url("/images/bg.jpg");
+        background-size:cover;
         color: #636b6f;
         font-family: 'Raleway', sans-serif;
         font-weight: 100;
@@ -39,18 +41,29 @@
         top: 18px;
     }
 
+    .top-left {
+        position: absolute;
+        left: 10px;
+        top: 18px;
+        font-size: 15px;
+        color: gray;
+        font-weight: 600;
+    }
     .content {
         text-align: center;
     }
 
     .title {
-        font-size: 84px;
+        font-size: 88px;
+        font-weight: 600;
+        color: #2c3e50;
     }
 
     .links > a {
-        color: #636b6f;
+        /* color: #636b6f; */
+        color: #2c3e50;
         padding: 0 25px;
-        font-size: 12px;
+        font-size: 15px;
         font-weight: 600;
         letter-spacing: .1rem;
         text-decoration: none;

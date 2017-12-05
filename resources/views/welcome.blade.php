@@ -75,6 +75,12 @@
                         <a href="{{ route('register') }}">Register</a>
                     @endauth
                 </div>
+                <div class="top-left links">
+                    @auth
+                        You are logged in, {{ Auth::user()->name }}
+                        
+                    @endauth
+                </div>
             @endif
 
             <div class="content">

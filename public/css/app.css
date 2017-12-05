@@ -8352,16 +8352,22 @@ button.close {
 
 .question {
   font-weight: bold;
-  padding: 10px;
-  background: #ccc;
+  padding: 5px;
+  background: #E3F0F4;
   border: 1px dotted #000;
   font-size: 1.2em;
   margin-left: 20px;
   width: 97% !important;
+  margin-top: 20px;
+  margin-bottom: 20px;
 }
 
 .choices {
   color: black !important;
+}
+
+.choice {
+  margin-left: 10px !important;
 }
 
 .correct {
@@ -8378,5 +8384,32 @@ button.close {
 
 .error-msg {
   display: none;
+}
+
+.navbar {
+  min-height: 80px;
+}
+
+.navbar-nav > li > a {
+  padding-top: 0px;
+  padding-bottom: 0px;
+  line-height: 80px;
+  font-size: 18px;
+}
+
+.navbar-brand {
+  padding-top: 0px;
+  padding-bottom: 0px;
+  line-height: 80px;
+  font-size: 30px;
+  font-weight: 600;
+}
+
+@media (max-width: 767px) {
+  .navbar-nav > li > a {
+    line-height: 20px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+  }
 }
 

@@ -5,7 +5,12 @@
     <div class="row">
         <div class="col-md-8 col-md-offset-2">
             <div class="panel panel-default">
-                <div class="panel-heading">ADMIN Login</div>
+                <div class="panel-heading text-center" 
+                    style="background:#c0392b;font-size:20px; color:white;">
+                        <b>Administrator Login</b>
+                </div>
+
+                <br>
 
                 <div class="panel-body">
                     <form class="form-horizontal" method="POST" action="{{ route('admin.login.submit') }}">
@@ -51,7 +56,7 @@
 
                         <div class="form-group">
                             <div class="col-md-8 col-md-offset-4">
-                                <button type="submit" class="btn btn-primary">
+                                <button type="submit" class="btn btn-danger">
                                     Login
                                 </button>
 
@@ -65,5 +70,11 @@
             </div>
         </div>
     </div>
+    <p class="text-center"><a href="/login">
+        <button type="submit" class="btn btn-danger">
+            User Panel
+        </button>
+    </a>
+    </p>
 </div>
 @endsection
